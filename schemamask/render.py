@@ -36,3 +36,17 @@ def decoding_lines(vocab: Vocab, decoding: Decoding) -> str:
         )
     )
     return "\n".join(lines) + "\n"
+
+
+def brief_lines(decoding: Decoding) -> str:
+    """Render the final result and the step totals without the step lines."""
+    masked = sum(step.masked for step in decoding.steps)
+    valid = "yes" if decoding.valid else "no"
+    lines = (
+        f"text: {decoding.text}",
+        f"status: {decoding.status}",
+        f"valid: {valid}",
+        f"steps: {len(decoding.steps)}",
+        f"masked: {masked}",
+    )
+    return "\n".join(lines) + "\n"

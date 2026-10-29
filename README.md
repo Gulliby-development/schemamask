@@ -138,6 +138,12 @@ $ python -m schemamask decode flag.json tiny.json spell.json
 text: true
 status: complete
 valid: yes
+$ python -m schemamask decode flag.json tiny.json spell.json --brief
+text: true
+status: complete
+valid: yes
+steps: 5
+masked: 39
 ```
 
 A vocabulary is a JSON array of 1–4096 unique, nonempty printable ASCII token strings;
@@ -161,7 +167,12 @@ select. Only `valid: yes` means the emitted text is a complete schema document. 
 default limit is 40 steps; `--max-steps N` accepts values from 1 through 400.
 Options may appear among positional arguments and use either `--name value` or
 `--name=value` syntax. A path of `-` reads standard input, which can be consumed only
-once per command.
+once per command. The options and switches of `decode` can be combined freely.
+
+`decode --brief` is a switch for long runs: it leaves out the per-step lines and prints only
+the five result lines `text:`, `status:`, `valid:`, `steps: N` (the number of steps taken)
+and `masked: M` (the sum of the `masked=` counts of all steps; `0` with `--no-mask`).
+The exit code is the same as without the switch.
 
 ## Supported schema subset
 

@@ -9,7 +9,7 @@ def test_prints_help_and_usage() -> None:
             "usage: schemamask COMMAND [ARGS]\n"
             "  check SCHEMA\n"
             "  allowed SCHEMA VOCAB [--prefix TEXT]\n"
-            "  decode SCHEMA VOCAB SCRIPT [--max-steps N] [--no-mask]\n"
+            "  decode SCHEMA VOCAB SCRIPT [--max-steps N] [--no-mask] [--brief]\n"
             "  validate SCHEMA TEXT\n"
         ),
         "",
@@ -20,7 +20,7 @@ def test_prints_help_and_usage() -> None:
             "usage: schemamask COMMAND [ARGS]\n"
             "  check SCHEMA\n"
             "  allowed SCHEMA VOCAB [--prefix TEXT]\n"
-            "  decode SCHEMA VOCAB SCRIPT [--max-steps N] [--no-mask]\n"
+            "  decode SCHEMA VOCAB SCRIPT [--max-steps N] [--no-mask] [--brief]\n"
             "  validate SCHEMA TEXT\n"
         ),
         "",
@@ -32,7 +32,7 @@ def test_prints_help_and_usage() -> None:
             "usage: schemamask COMMAND [ARGS]\n"
             "  check SCHEMA\n"
             "  allowed SCHEMA VOCAB [--prefix TEXT]\n"
-            "  decode SCHEMA VOCAB SCRIPT [--max-steps N] [--no-mask]\n"
+            "  decode SCHEMA VOCAB SCRIPT [--max-steps N] [--no-mask] [--brief]\n"
             "  validate SCHEMA TEXT\n"
         ),
     )
@@ -50,7 +50,7 @@ def test_accepts_long_help_alias() -> None:
             "usage: schemamask COMMAND [ARGS]\n"
             "  check SCHEMA\n"
             "  allowed SCHEMA VOCAB [--prefix TEXT]\n"
-            "  decode SCHEMA VOCAB SCRIPT [--max-steps N] [--no-mask]\n"
+            "  decode SCHEMA VOCAB SCRIPT [--max-steps N] [--no-mask] [--brief]\n"
             "  validate SCHEMA TEXT\n"
         ),
         "",

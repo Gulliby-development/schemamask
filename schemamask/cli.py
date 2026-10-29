@@ -14,7 +14,7 @@ USAGE = (
     "usage: schemamask COMMAND [ARGS]\n"
     "  check SCHEMA\n"
     "  allowed SCHEMA VOCAB [--prefix TEXT]\n"
-    "  decode SCHEMA VOCAB SCRIPT [--max-steps N] [--no-mask]\n"
+    "  decode SCHEMA VOCAB SCRIPT [--max-steps N] [--no-mask] [--brief]\n"
     "  validate SCHEMA TEXT\n"
 )
 
